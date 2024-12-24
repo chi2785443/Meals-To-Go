@@ -1,16 +1,41 @@
-import { useContext } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { useContext, useEffect, useState } from "react";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { Button } from "react-native-paper";
 import { AuthenticationContext } from "../../services/authentication/authentication.context";
 import { List, Avatar } from "react-native-paper";
 import { router } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Tab() {
   const { onLogout, user } = useContext(AuthenticationContext);
+  const [photo, setPhoto] = useState(null);
+  const getProfilePicture = async (user) => {
+    const photoUri = await AsyncStorage.getItem(`${user.uid}-photo`);
+    setPhoto(photoUri);
+  };
+
+  useEffect(() => {
+    getProfilePicture(user);
+  }, [user]);
+
   return (
     <View style={styles.container}>
       <View style={styles.avatarContainer}>
-        <Avatar.Icon size={140} icon="human" style={styles.avatar} />
+        <TouchableOpacity
+          onPress={() => {
+            router.push("/camera/");
+          }}
+        >
+          {!photo ? (
+            <Avatar.Icon size={140} icon="human" style={styles.avatar} />
+          ) : (
+            <Avatar.Image
+              size={140}
+              source={{ uri: photo }}
+              style={styles.avatar}
+            />
+          )}
+        </TouchableOpacity>
         <Text>{"user.email"}</Text>
       </View>
       <List.Section>

@@ -93,6 +93,13 @@ export default function RootLayout() {
                     title: "favourites",
                   }}
                 />
+                <Stack.Screen
+                  name="camera"
+                  options={{
+                    headerShown: true,
+                    title: "camera",
+                  }}
+                />
               </Stack>
             </RestaurantsContextProvider>
           </LocationContextProvider>
