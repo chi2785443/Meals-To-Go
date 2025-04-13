@@ -14,7 +14,6 @@ A beautifully designed restaurant and meal discovery app built with **React Nati
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="Screenshot_1744582006.png" width="200" />
   <img src="Screenshot_1744582571.png" width="200" />
   <img src="Screenshot_1744582660.png" width="200" />
   <img src="Screenshot_1744582665.png" width="200" />
