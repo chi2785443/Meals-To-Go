@@ -1,50 +1,156 @@
-# Welcome to your Expo app 👋
+---
+# 🍽️ Meals-To-Go — Restaurant App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A beautifully designed restaurant and meal discovery app built with **React Native** and **Expo Router**, packed with rich animations, interactive maps, and real-time Firebase integration. Perfect for foodies looking for delicious meals nearby or planning their next dine-out adventure!
 
-## Get started
+<p align="center">
+<img src="https://img.shields.io/badge/React%20Native-0.76.3-61DAFB" />
+<img src="https://img.shields.io/badge/Expo-52.0.17-blue" />
+<img src="https://img.shields.io/badge/Firebase-Connected-yellow" />
+<img src="https://img.shields.io/badge/License-MIT-green" />
+</p>
+---
 
-1. Install dependencies
+## 📸 Screenshots
 
-   ```bash
-   npm install
-   ```
+<p align="center">
+  <img src="Screenshot_1744582006.png" width="200" />
+  <img src="Screenshot_1744582571.png" width="200" />
+  <img src="Screenshot_1744582660.png" width="200" />
+  <img src="Screenshot_1744582665.png" width="200" />
+  <img src="Screenshot_1744582722.png" width="200" />
+  <img src="Screenshot_1744582740.png" width="200" />
+  <img src="Screenshot_1744582767.png" width="200" />
+  <img src="Screenshot_1744582772.png" width="200" />
+  <img src="Screenshot_1744582781.png" width="200" />
+</p>
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## ✨ Features
 
-In the output, you'll find options to open the app in a
+- 🔍 **Search for Nearby Restaurants**
+- 📍 **Interactive Map with Restaurant Pins**
+- ⭐ **View Ratings, Photos, and Open/Close Status**
+- 💾 **Save Favorites Locally with AsyncStorage**
+- 🔥 **Animated Loaders with Lottie**
+- 🗺️ **React Native Maps Integration**
+- 🧠 **Firebase Integration for Authentication or Dynamic Data**
+- 💅 **Themed UI with React Native Paper**
+- 🌐 **Seamless Navigation via Expo Router**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🧰 Tech Stack
 
-## Get a fresh project
+### 📦 Core
 
-When you're ready, run:
+- **React Native (Expo SDK 52)**
+- **Expo Router** for file-based navigation
+- **React Navigation** (Bottom Tabs)
+- **Firebase** for backend (Auth or DB)
+
+### 🧩 Libraries & Tools
+
+- **React Native Maps** for interactive locations
+- **React Native Paper** for theming and UI components
+- **AsyncStorage** for saving favorites
+- **Lottie React Native** for rich animations
+- **Google Fonts (Oswald, Lato, Inter)**
+
+---
+
+## 🗂️ Project Structure
 
 ```bash
-npm run reset-project
+.
+├── app/                      # Screens and navigation (Expo Router)
+│   ├── (tabs)/               # Tab-based navigation
+│   ├── details/               # resturant details
+│   └── _layout.tsx           # Shared layout and navigation config
+├── assets/                   # Fonts, icons, images
+├── components/               # Reusable components (cards, headers, etc.)
+├── services/                 # API and Firebase utilities
+├── context/                  # Context for managing global states (e.g., favorites)
+├── theme/                    # Custom theme for Paper
+├── utils/                    # Utility functions
+├── types/                    # Type definitions
+├── scripts/                  # Project scripts (e.g., reset-project.js)
+└── constants/                # App-wide constants
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## ⚙️ Getting Started
 
-To learn more about developing your project with Expo, look at the following resources:
+### 1. Clone the Repository
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/your-username/meals-to-go.git
+cd meals-to-go
+```
 
-## Join the community
+### 2. Install Dependencies
 
-Join our community of developers creating universal apps.
+```bash
+npm install
+# or
+yarn
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 3. Add Firebase Config
+
+Create a `.env` file in the root and add:
+
+```env
+FIREBASE_API_KEY=your_api_key
+FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=sender_id
+FIREBASE_APP_ID=app_id
+```
+
+### 4. Run the App
+
+```bash
+npm run start
+```
+
+---
+
+## 🧪 Testing
+
+```bash
+npm run test
+```
+
+Powered by **Jest** and **jest-expo**.
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork and contribute!
+
+1. Fork it
+2. Create a branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'feat: add your feature'`)
+4. Push and open a pull request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨🏽‍🍳 Author
+
+**Chinedu Aguwa**  
+📧 [neduaguwa443@gmail.com](mailto:neduaguwa443@gmail.com)  
+📞 +234 810 547 1046  
+[LinkedIn](https://www.linkedin.com/in/chinedu-aguwa-b1747a2b0) • [GitHub](https://github.com/chi2785443)
+
+---
